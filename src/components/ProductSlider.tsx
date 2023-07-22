@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ProductSlider = () => {
+interface ProductSliderProps {
+    data : any
+}
+
+const ProductSlider: React.FC<ProductSliderProps> = ({data}) => {
+    console.log(data)
     return (
         <div>
             ProductSlider
