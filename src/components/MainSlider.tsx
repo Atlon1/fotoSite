@@ -59,17 +59,18 @@ const MainSlider: React.FC = () => {
                 {sliderData.map((slide, index) => {
                     return <SwiperSlide key={index}>
                         <div>
-                            <div>
-                                <div>
-                                    {slide.pretitle}
-                                    <div className='text-3xl md:text-[46px] font-semibold uppercase leading-none text-center lg:text-left mb-8 xl:mb-20'>
+                            <div className='flex flex-col lg:flex-row h-full p-[20px] md:p-[60px]'>
+                                <div className='w-full lg:flex-1'>
+                                    <div className='uppercase mb-1 text-center xl:text-left'>{slide.pretitle}</div>
+                                    <div className='text-3xl md:text-[46px] font-semibold uppercase leading-none text-center xl:text-left mb-8 xl:mb-20'>
                                         {slide.titlePart1} <br/>
                                         {slide.titlePart2} <br/>
                                         {slide.titlePart3}
                                     </div>
+                                    <button className='btn btn-accent mx-auto xl:mx-0'>Shop now</button>
                                 </div>
                             </div>
-                            <div className='flex-1'>
+                            <div className='flex flex-1 justify-center'>
                                 <img
                                     className='xl:absolute xl:-right-16 xl:-bottom-12'
                                     src={slide.img}
