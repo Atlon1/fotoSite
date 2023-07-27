@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import Logo from '../img/logo.png';
 
@@ -10,10 +10,12 @@ import {Link} from 'react-router-dom'
 import SearchForm from "./SearchForm";
 import CategoryNavMobile from "./CategoryNavMobile";
 import Cart from "./Cart";
+import {CartContext} from "../context/CartContext";
 
 
 
 const Header = () => {
+    useContext(CartContext)
     return (
         <header>
             <div className='container mx-auto'>
