@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 
 import Logo from '../img/logo.png';
 
@@ -15,16 +15,19 @@ import {CartContext} from "../context/CartContext";
 
 
 const Header = () => {
-    useContext(CartContext)
+   const {isOpen, setIsOpen} = useContext<any>(CartContext)
+    const [catNavMobile, setCatNavMobile] = useState(false)
     return (
-        <header>
+        <header className='bg-primary py-6 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]'>
             <div className='container mx-auto'>
-                <div>
-                    <div>
+                <div className='flex flex-row gap-4 lg:items-center justify-between mb-4 lg:mb-0'>
+                    <div
+                        onClick={()=> setCatNavMobile(true)}
+                        className='text-3xl xl:hi cursor-pointer'>
                         <FiMenu/>
                     </div>
-                    <div>
-                        <CategoryNavMobile/>
+                    <div className={`${catNavMobile ? "left-0" : "-left-full"} fixed top-0 bottom-0 z-30 w-full h-screen transition-all duration-200`}>
+                        <CategoryNavMobile setCatNavMobile={setCatNavMobile}/>
                     </div>
                     <Link to={'/'}>
                         <img src={Logo} alt='Logo'/>
@@ -34,11 +37,12 @@ const Header = () => {
                     </div>
                     <div>
                         <div>Need help? 123 456 789</div>
-                        <div className='relative cursor-pointer'>
+                        <div onClick={()=>(setIsOpen(!isOpen))}
+                             className='relative cursor-pointer'>
                             <SlBag className='text-2xl'/>
                             <div>2</div>
                         </div>
-                        <div className='bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 w-full z-10 md:mx-w-[500px] transition-all duration-300'>
+                        <div className={`${isOpen ? "right-0" : "-right-full"} bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 w-full z-10 md:max-w-[500px] transition-all duration-300`}>
                             <Cart/>
                         </div>
                     </div>
