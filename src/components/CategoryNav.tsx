@@ -14,8 +14,6 @@ type Category = {
 const CategoryNav: React.FC = () => {
 
     const {data} = useFetch('/categories')
-
-
     return (
         <aside className='hidden xl:flex'>
             <div className='bg-primary flex flex-col w-[286px] h-[500px] rounded-[8px] overflow-hidden'>

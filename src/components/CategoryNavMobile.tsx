@@ -1,20 +1,45 @@
 import React, {FC} from 'react';
 
-import {FiX} from "react-icons/fi"
+import {FiX} from "react-icons/fi";
+import {Link} from 'react-router-dom';
+import useFetch from "../hooks/useFetch";
 
 interface CategoryProps {
     setCatNavMobile: any
 }
 
-const CategoryNavMobile : FC<CategoryProps> = ({setCatNavMobile}) => {
+type Category = {
+    id: number
+    div: any
+    attributes: {
+        title: string
+    }
+}
+
+const CategoryNavMobile: FC<CategoryProps> = ({setCatNavMobile}) => {
+
+    const {data} = useFetch('/categories')
+
+    console.log(data)
+
     return (
         <div className='w-full h-full bg-primary p-8'>
             <div
-                onClick={()=> setCatNavMobile(false)}
+                onClick={() => setCatNavMobile(false)}
                 className='flex justify-end mb-8 cursor-pointer'>
                 <FiX className='text-3xl'/>
             </div>
-            CategoryNavMobile
+            <div className='flex flex-col gap-y-8'>
+                {(data as unknown as any)?.map((category: Category) => {
+                    return <Link
+                        className='uppercase font-medium'
+                        to={`products/${category.id}`}
+                        key={category.div}
+                    >
+                        {category.attributes.title} Cameras
+                    </Link>
+                })}
+            </div>
         </div>
     );
 };
