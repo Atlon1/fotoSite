@@ -10,7 +10,6 @@ interface CategoryProps {
 
 type Category = {
     id: number
-    div: any
     attributes: {
         title: string
     }
@@ -34,7 +33,7 @@ const CategoryNavMobile: FC<CategoryProps> = ({setCatNavMobile}) => {
                     return <Link
                         className='uppercase font-medium'
                         to={`products/${category.id}`}
-                        key={category.div}
+                        key={category.id}
                     >
                         {category.attributes.title} Cameras
                     </Link>
