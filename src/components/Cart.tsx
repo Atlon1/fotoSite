@@ -5,7 +5,7 @@ import {CartContext} from "../context/CartContext";
 
 const Cart= () => {
 
-   const{setIsOpen} = useContext<any>(CartContext)
+   const{setIsOpen, cart} = useContext<any>(CartContext)
     return (
         <div className='w-full h-full px-4 text-white'>
             <div>
@@ -13,6 +13,11 @@ const Cart= () => {
                     onClick={() => setIsOpen(false)}
                     className='text-4xl w-20 h-[98px] flex justify-start items-center cursor-pointer'>
                     <IoClose/>
+                </div>
+                <div>
+                    {cart.map((item: any)=>{
+                        return <div>Cart Item</div>
+                    })}
                 </div>
             </div>
         </div>

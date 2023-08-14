@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useParams} from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import RelatedProducts from "../components/RelatedProducts";
 import {CartContext} from "../context/CartContext";
 
 const ProductDetails = () => {
+
+    const {addToCart} = useContext<any> (CartContext)
     const {id} = useParams()
     const {data} = useFetch(`/products?populate=*&filters[id][$eq]=${id}`)
     if (!data) {
@@ -16,7 +18,8 @@ const ProductDetails = () => {
         <div className='mb-16 pt-44 lg:pt-[30px] xl:pt-0'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row gap-[30px] mb-[30px]'>
-                    <div className='flex-1 lg:max-w-[40%] lg:h-[540px] grad rounded-lg flex justify-center items-center'>
+                    <div
+                        className='flex-1 lg:max-w-[40%] lg:h-[540px] grad rounded-lg flex justify-center items-center'>
                         <img
                             src={`http://localhost:1337${(data as unknown as any)[0].attributes.image.data.attributes.url}`}
                             alt=''
@@ -34,8 +37,11 @@ const ProductDetails = () => {
                             {(data as unknown as any)[0].attributes.description}
                         </p>
                         <div className='flex items-center gap-x-8'>
-                            <div className='text-3xl text-accent font-semibold'>${(data as unknown as any)[0].attributes.price}</div>
-                            <button className='btn btn-accent'>Add to Cart</button>
+                            <div
+                                className='text-3xl text-accent font-semibold'>${(data as unknown as any)[0].attributes.price}</div>
+                            <button
+                                onClick={()=> addToCart(data,id)}
+                                className='btn btn-accent'>Add to Cart</button>
                         </div>
 
                     </div>

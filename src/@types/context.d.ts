@@ -1,4 +1,7 @@
 export type CartContextType = {
-    isOpen: any
+    isOpen: boolean
     setIsOpen: any
+    addToCart: object
+    cart:object
+
 }
