@@ -10,7 +10,6 @@ type Category = {
     }
 }
 
-
 const CategoryNav: React.FC = () => {
 
     const {data} = useFetch('/categories')

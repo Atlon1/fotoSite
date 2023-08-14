@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-
 import {FiX} from "react-icons/fi";
 import {Link} from 'react-router-dom';
 import useFetch from "../hooks/useFetch";
