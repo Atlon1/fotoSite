@@ -19,7 +19,6 @@ const CategoryNavMobile: FC<CategoryProps> = ({setCatNavMobile}) => {
 
     const {data} = useFetch('/categories')
 
-    console.log(data)
 
     return (
         <div className='w-full h-full bg-primary p-8'>
