@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {IoClose} from "react-icons/io5"
 import {CartContext} from "../context/CartContext";
+import CartItem from "./CartItem";
 
 
 const Cart= () => {
@@ -16,7 +17,7 @@ const Cart= () => {
                 </div>
                 <div>
                     {cart.map((item: any)=>{
-                        return <div>Cart Item</div>
+                        return <CartItem item={item} key={item.id}/>
                     })}
                 </div>
             </div>

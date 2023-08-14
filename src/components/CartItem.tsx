@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
+import { Link } from 'react-router-dom'
 
-const CartItem = () => {
+interface Item{
+    item: any
+}
+
+const CartItem: FC<Item> = ({item}) => {
     return (
-        <div>
-            CartItem
+        <div className='flex'>
+            <Link to={''}>
+                <img src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}/>
+            </Link>
         </div>
     );
 };
