@@ -20,7 +20,7 @@ const CategoryNavMobile: FC<CategoryProps> = ({setCatNavMobile}) => {
 
 
     return (
-        <div className='w-full h-full bg-primary p-8'>
+        <div className='w-[50vw] h-full bg-primary p-8'>
             <div
                 onClick={() => setCatNavMobile(false)}
                 className='flex justify-end mb-8 cursor-pointer'>
