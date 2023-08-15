@@ -16,12 +16,12 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
     const [amount, setAmount] = useState<number>(0);
     const [total, setTotal] = useState<number>(0);
 
-    useEffect(()=> {
-        const amount = cart.reduce((a:any, b:any) => {
+    useEffect(() => {
+        const amount = cart.reduce((a: any, b: any) => {
             return a + b.amount
-        },0)
+        }, 0)
         setItemsAmount(amount)
-    },[cart])
+    }, [cart])
 
     const addToCart = (item: any, id: string) => {
         const itemID = parseInt(id)
@@ -48,36 +48,54 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
         setIsOpen(true)
     };
 
-    const removeFromCart = (id : number) => {
-        const newCart = cart.filter((item: any)=>{
+    const removeFromCart = (id: number) => {
+        const newCart = cart.filter((item: any) => {
             return item.id !== id
         })
         setCart(newCart)
     }
 
-    const handleInput = (e: any, id:any) => {
+    const handleInput = (e: any, id: any) => {
         const value = parseInt(e.target.value)
-        const cartItem = cart.find((item: object)=>{
-            // @ts-ignore
+        const cartItem = cart.find((item: any) => {
             return item.id === id
         })
-         if (cartItem){
-             const newCart = cart.map((elem: any) =>{
-                 if (elem.id === id){
-                     if (isNaN(value)){
-                         setAmount(1)
-                         return {...elem, amount: 1}
-                     } else {
-                         setAmount(value)
-                         return {...elem, amount: value}
-                     }
-                 } else {
-                     return elem
-                 }
-             })
-             setCart(newCart)
-         }
-         setIsOpen(true)
+        if (cartItem) {
+            const newCart = cart.map((elem: any) => {
+                if (elem.id === id) {
+                    if (isNaN(value)) {
+                        setAmount(1)
+                        return {...elem, amount: 1}
+                    } else {
+                        setAmount(value)
+                        return {...elem, amount: value}
+                    }
+                } else {
+                    return elem
+                }
+            })
+            setCart(newCart)
+        }
+        setIsOpen(true)
+    }
+
+    const handleSelected = (e: any, id: unknown) => {
+        const value = parseInt(e.target.value)
+        const cartItem = cart.find((elem: any) => {
+            return elem.id === id
+        })
+        if (cartItem) {
+            const newCart = [...cart].map(item => {
+                // @ts-ignore
+                if (item.id === id) {
+                    setAmount(value)
+                    return {...item, amount: value}
+                } else {
+                    return item
+                }
+            });
+            setCart(newCart)
+        }
     }
 
 
@@ -89,6 +107,7 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
         removeFromCart,
         itemsAmount,
         handleInput,
+        handleSelected,
     };
 
     return (

@@ -6,4 +6,5 @@ export type CartContextType = {
     removeFromCart: any
     itemsAmount: number
     handleInput: any
+    handleSelected: any
 }

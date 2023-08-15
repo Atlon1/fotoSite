@@ -7,13 +7,14 @@ interface Quantity {
 
 const Qty: FC<Quantity> = ({item}) => {
 
-    const {handleInput} = useContext<any>(CartContext)
+    const {handleInput, handleSelected} = useContext<any>(CartContext)
 
     return (
         <div className='flex gap-x-6 items-center text-primary'>
             {
-                item.amount > 10 ? (
+                item.amount < 10 ? (
                     <select
+                        onChange={(e) => handleSelected(e, item.id)}
                         value={item.amount}
                         className='p-2 rounded-lg h-12 w-[120px] outline-none text-primary'
                     >
