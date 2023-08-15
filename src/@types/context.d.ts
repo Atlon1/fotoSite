@@ -3,5 +3,7 @@ export type CartContextType = {
     setIsOpen: any
     addToCart: object
     cart:object
-
+    removeFromCart: any
+    itemsAmount: number
+    handleInput: any
 }
