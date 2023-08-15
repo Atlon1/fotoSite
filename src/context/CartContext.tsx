@@ -23,6 +23,13 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
         setItemsAmount(amount)
     }, [cart])
 
+    useEffect(()=>{
+        const total = cart.reduce((a: any, b: any) => {
+            return a+b.attributes.price * b.amount
+        },0)
+        setTotal(total)
+    },[cart])
+
     const addToCart = (item: any, id: string) => {
         const itemID = parseInt(id)
         const newItem = {...item[0], amount: 1}
@@ -47,6 +54,7 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
         }
         setIsOpen(true)
     };
+
 
     const removeFromCart = (id: number) => {
         const newCart = cart.filter((item: any) => {
@@ -98,6 +106,10 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
         }
     }
 
+    const ClearCart = () => {
+        setCart([])
+    }
+
 
     const cartContextValue: CartContextType = {
         isOpen,
@@ -108,6 +120,8 @@ const CartProvider: React.FC<CartProviderProps> = ({children}) => {
         itemsAmount,
         handleInput,
         handleSelected,
+        total,
+        ClearCart,
     };
 
     return (

@@ -1,10 +1,12 @@
 export type CartContextType = {
     isOpen: boolean
-    setIsOpen: any
+    setIsOpen: function
     addToCart: object
     cart:object
-    removeFromCart: any
+    removeFromCart: function
     itemsAmount: number
-    handleInput: any
-    handleSelected: any
+    handleInput: function
+    handleSelected: function
+    total: number
+    ClearCart: function
 }
