@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/fotoSite/static/css/main.ac0a5000.css",
+    "main.js": "/fotoSite/static/js/main.95bbca2e.js",
+    "static/media/camera.png": "/fotoSite/static/media/camera.2762795c8e314c5696dc.png",
+    "static/media/mainSlider_bg.png": "/fotoSite/static/media/mainSlider_bg.1e347e157167d542e43e.png",
+    "static/media/Maciej_logo.png": "/fotoSite/static/media/Maciej_logo.5d5651cd1755b2acd341.png",
+    "static/media/promo_img2.png": "/fotoSite/static/media/promo_img2.f01c9a4b6b044df47fa3.png",
+    "static/media/promo_img1.png": "/fotoSite/static/media/promo_img1.b69bd7fc15a6a2a06dd9.png",
+    "index.html": "/fotoSite/index.html",
+    "main.ac0a5000.css.map": "/fotoSite/static/css/main.ac0a5000.css.map",
+    "main.95bbca2e.js.map": "/fotoSite/static/js/main.95bbca2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac0a5000.css",
+    "static/js/main.95bbca2e.js"
+  ]
+}
