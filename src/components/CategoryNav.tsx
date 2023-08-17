@@ -24,7 +24,7 @@ const CategoryNav: React.FC = () => {
                     {(data as unknown as any)?.map((category: Category) => (
                         <Link
                             className='cursor-pointer uppercase'
-                            to={`/products/${category.id}`}
+                            to={`/fotoSite/products/${category.id}`}
                             key={category.id}>
                             {category.attributes.title}
                         </Link>

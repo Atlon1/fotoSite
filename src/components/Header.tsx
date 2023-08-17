@@ -30,7 +30,7 @@ const Header = () => {
                         className={`${catNavMobile ? "left-0" : "-left-full"} fixed top-0 bottom-0 z-30 w-full h-screen transition-all duration-200`}>
                         <CategoryNavMobile setCatNavMobile={setCatNavMobile}/>
                     </div>
-                    <Link to={'/'}>
+                    <Link to={'/fotoSite'}>
                         <img src={Logo} alt='Logo'/>
                     </Link>
                     <div className='hidden w-full xl:flex xl:max-w-[734px]'>

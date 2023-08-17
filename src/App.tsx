@@ -27,10 +27,10 @@ const router = createBrowserRouter([
     {
         element: <Layout/>,
         children: [
-            {path: '/', element: <Home/>},
-            {path: '/products/:id', element: <Products/>},
-            {path: '/product/:id', element: <ProductDetails/>},
-            {path: '/search', element: <Search/>}
+            {path: '/fotoSite', element: <Home/>},
+            {path: '/fotoSite/products/:id', element: <Products/>},
+            {path: '/fotoSite/product/:id', element: <ProductDetails/>},
+            {path: '/fotoSite/search', element: <Search/>}
         ]
     }
 ])

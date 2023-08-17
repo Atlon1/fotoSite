@@ -21,7 +21,7 @@ const SearchForm = () => {
     const handleSubmit = (e: any)=>{
         e.preventDefault()
         if (searchItem.length > 0){
-            navigate(`/search?query=${searchItem}`)
+            navigate(`fotoSite/search?query=${searchItem}`)
             // @ts-ignore
             document.querySelector('input').value = ''
             setSearchItem('')

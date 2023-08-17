@@ -21,27 +21,27 @@ const Footer = () => {
                     <button className='btn btn-accent min-w-[150px]'>Join</button>
                 </form>
                 <div className='text-base text-white/60 flex gap-x-6 capitalize max-w-max mx-auto mb-9'>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                         Returns policy
                     </a>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                         Track your order
                     </a>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                         Shipping & delivery
                     </a>
                 </div>
                 <div className='flex gap-x-6 max-w-max mx-auto text-lg mb-16'>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                        <FaYoutube/>
                     </a>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                         <FaInstagram/>
                     </a>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                         <FaTwitter/>
                     </a>
-                    <a href='#' className='hover:text-white transition-all'>
+                    <a href='/' className='hover:text-white transition-all'>
                         <FaFacebook/>
                     </a>
                 </div>

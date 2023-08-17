@@ -15,12 +15,12 @@ const CartItem: FC<Item> = ({item}) => {
         <div className='flex gap-x-8'>
             <Link
                 className='w-[70px] h-[70px]'
-                to={`product/${item.id}`}>
+                to={`fotoSite/product/${item.id}`}>
                 <img src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}/>
             </Link>
             <div className='flex-1'>
                 <div className='flex gap-x-4 mb-3'>
-                    <Link to={`product/${item.id}`}>
+                    <Link to={`fotoSite/product/${item.id}`}>
                         {item.attributes.title}
                     </Link>
                     <div

@@ -30,7 +30,7 @@ const CategoryNavMobile: FC<CategoryProps> = ({setCatNavMobile}) => {
                 {(data as unknown as any)?.map((category: Category) => {
                     return <Link
                         className='uppercase font-medium'
-                        to={`products/${category.id}`}
+                        to={`fotoSite/products/${category.id}`}
                         key={category.id}
                     >
                         {category.attributes.title} Cameras
