@@ -1,6 +1,6 @@
-# Welcome to Photoland: Your Premier Destination for Photography Enthusiasts**
+# Welcome to Photoland: Your Premier Destination for Photography Enthusiasts
 
-Photoland is your ultimate online hub for all things photography. We offer a diverse range of high-quality cameras, lenses, and accessories to cater to both amateur and professional photographers.
+**Photoland** is your ultimate online hub for all things photography. We offer a diverse range of high-quality cameras, lenses, and accessories to cater to both amateur and professional photographers.
 
 **Explore the Best:** Dive into our curated collection of cutting-edge DSLRs, mirrorless cameras, lenses, and more from top brands like Canon, Nikon, and Sony.
 
