@@ -70,14 +70,35 @@ starts here. Explore our website today and unlock a world of possibilities!
 
 ## Desktop
 
+## Main section
 <div align="center">
 <img src="src/assets/Desktop_ss/Main_section_1.jpg" width="500" alt="Desktop Screenshot" margin="20">
  </div>
-##
+
+## Selection section
   <div align="center">
 <img src="src/assets/Desktop_ss/Main_section_2.jpg" width="500" alt="Desktop Screenshot" margin="20">
 </div>
-##
+
+## Cart section
 <div align="center">
 <img src="src/assets/Desktop_ss/Main_section_3.jpg" width="500" alt="Desktop Screenshot" margin="20">
 </div>
+
+## Mobile
+
+## Main section
+<div align="center">
+<img src="src/assets/Mobile_ss/Main_section_1.jpg" width="300" alt="Mobile Screenshot">
+<img src="src/assets/Mobile_ss/Main_section_2.jpg" width="300" alt="Mobile Screenshot">
+<img src="src/assets/Mobile_ss/Main_section_3.jpg" width="300" alt="Mobile Screenshot">
+ </div>
+
+## Prerequisites
+* Before getting started, make sure you have the Node.js and npm or yarn
+* Clone this repository to your local machine
+* Navigate to the project directory
+* Install the project dependencies by running npm install or yarn install
+* Start the development server npm start or yarn start
+* Bash on folder Api to run strapi
+* Open your browser and visit your localhost:3000 to see the running application.
